@@ -24,6 +24,7 @@ const colors = {
   Secondary400: '#FFDD85',
   Secondary500: '#FBD268',
   Black_W: '#F8F8F8',
+  Black_B: '#111111',
   Black100: '#C7C7C7',
   Black200: '#AAAAAA',
   Black300: '#7E7E7E',
