@@ -12,7 +12,7 @@ const MyInsueSection = () => {
 
   return (
     <Section>
-      <Section.Head title="내 보험" description="입력한 정보를 기반으로 내 보험을 보여줍니다." />
+      <Section.Head title="내 보험" description="입력한 정보를 기반으로 내 보험을 보여줍니다." help="asdfasdf" />
 
       <Scroll>
         <List>
