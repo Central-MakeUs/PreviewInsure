@@ -32,6 +32,7 @@ const colors = {
   Black500: '#434343',
   AlertT: '#FF0000',
   AlertB: '#FFD2D2',
+  White_bg: '#f8f9fb',
 };
 
 // 자주 사용하는 스타일 속성

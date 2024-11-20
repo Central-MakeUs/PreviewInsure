@@ -44,7 +44,7 @@ function Header() {
 
   return (
     <Container className={`${isHome ? 'primary' : ''}`} isScrolled={isScrolled}>
-      <LogoImg src={isHome ? LogoWhite : Logo} onClick={goToMain} />
+      <LogoImg isHome={isHome} onClick={goToMain} alt="Presue Logo" />
 
       <PC>
         <LinkBox>
@@ -83,6 +83,9 @@ const Container = styled.header<{ isScrolled: boolean }>`
 
   &.primary {
     background-color: ${({ theme }) => theme.colors.Primary500};
+    ${({ theme }) => media.mobile`
+      background-color: ${theme.colors.White_bg};
+    `}
   }
 `;
 
@@ -101,13 +104,18 @@ const PC = styled.div`
   `};
 `;
 
-const LogoImg = styled.img`
+const LogoImg = styled.img<{ isHome: boolean }>`
   position: absolute;
   height: 28px;
   left: 18rem;
   top: 7rem;
   z-index: 3;
   object-fit: cover;
+  content: url(${Logo});
+
+  ${({ isHome }) => `
+    content: url(${LogoWhite});
+  `}
 
   cursor: pointer;
   ${media.medium`
@@ -122,8 +130,9 @@ const LogoImg = styled.img`
   `};
 
   ${media.mobile`
+    content: url(${Logo});
     height: 22px;
-    left: 32px;
+    left: 22px;
     top: 6rem
   `};
 `;
