@@ -21,10 +21,13 @@ const Banner = () => {
 const Box = styled.div`
   background-color: white;
   border-radius: 12px;
-  width: fit-content;
+  min-width: fit-content;
+  width: 80%;
+  align-items: center;
   margin-inline: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const Img = styled.img`

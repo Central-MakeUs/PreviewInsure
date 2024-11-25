@@ -48,6 +48,10 @@ const common = {
     justify-content: center;
     align-items: center;
   `,
+  // 모바일 화면에서 좌우 마진값 공통으로 관리
+  mobileMarginInline: `
+    margin-inline: 20px;
+  `,
 };
 
 // theme 객체에 감싸서 반환한다.

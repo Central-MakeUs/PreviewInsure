@@ -1,4 +1,5 @@
 import { Section } from '@components/commons/Section';
+import theme from '@styles/theme';
 import styled from 'styled-components';
 
 const IntroSection = () => {

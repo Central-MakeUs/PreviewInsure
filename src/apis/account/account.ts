@@ -101,20 +101,8 @@ export function useInsueComponayPatchMutation() {
   const mutation = useMutation({
     mutationFn: (data: PatchInsueRequest) => patchInsueCompany(data),
     onSuccess: (newData, data) => {
-      const item: InsueItem = {
-        accountInsuranceId: data.accountInsuranceId,
-        insuranceType: data.insuranceType,
-        insuranceCompany: data.insuranceCompany,
-      };
-      queryClient.setQueryData(accountKeys.insurance(), (oldData: InsueItem[] | undefined) => {
-        if (!oldData) {
-          return [item];
-        }
-
-        return oldData.map((existingItem) =>
-          existingItem.accountInsuranceId === item.accountInsuranceId ? item : existingItem,
-        );
-      });
+      //새로 Get요청
+      queryClient.invalidateQueries({ queryKey: accountKeys.insurance() });
     },
     onError: (e: any) => {
       console.log(e);
