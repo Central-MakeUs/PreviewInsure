@@ -97,7 +97,7 @@ function BottomNav() {
           <span>내보험</span>
         </NavItem>
         <NavItem isActive={activeNav === '/user'} onClick={() => handleNavClick('/user')}>
-          <UserIcon width={17} height={20} style={{ marginBottom: '12.45px' }} />
+          <UserIcon width={19} height={20} style={{ marginBottom: '14px' }} />
           <span>마이</span>
         </NavItem>
       </Nav>

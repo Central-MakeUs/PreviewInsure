@@ -24,6 +24,7 @@ const colors = {
   Secondary400: '#FFDD85',
   Secondary500: '#FBD268',
   Black_W: '#F8F8F8',
+  Black_B: '#111111',
   Black100: '#C7C7C7',
   Black200: '#AAAAAA',
   Black300: '#7E7E7E',
@@ -31,6 +32,7 @@ const colors = {
   Black500: '#434343',
   AlertT: '#FF0000',
   AlertB: '#FFD2D2',
+  White_bg: '#f8f9fb',
 };
 
 // 자주 사용하는 스타일 속성
@@ -45,6 +47,10 @@ const common = {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  `,
+  // 모바일 화면에서 좌우 마진값 공통으로 관리
+  mobileMarginInline: `
+    margin-inline: 20px;
   `,
 };
 

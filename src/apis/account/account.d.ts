@@ -9,6 +9,7 @@ export interface InsueItem {
   accountInsuranceId: number;
   insuranceType: string;
   insuranceCompany: string;
+  insuranceImage: String;
 }
 
 export interface PatchInsueRequest {
